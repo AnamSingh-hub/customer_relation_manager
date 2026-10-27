@@ -1,0 +1,18 @@
+<h1>Customer Relation Manager</h1>
+
+<nav>
+  <%= link_to "All Customers", customers_index_path %> |
+  <%= link_to "Alphabetized Customers", customers_alphabetized_path %> |
+  <%= link_to "Customers Missing Email", customers_missing_email_path %> |
+  <%= link_to "Admin Dashboard", admin_root_path %>
+</nav>
+
+<hr>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>
+
+<% if @customers.empty? %>
+  <p>No customers found.</p>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Alphabetized Customers</h1>
+
+<nav>
+  <%= link_to "All Customers", root_path %> |
+  <%= link_to "Customers Missing Email", customers_missing_email_path %> |
+  <%= link_to "Admin Dashboard", admin_root_path %>
+</nav>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>
+
+<% if @customers.empty? %>
+  <p>No customers found.</p>
+<% end %>
