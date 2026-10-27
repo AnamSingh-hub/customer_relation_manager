@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "activeadmin"
 gem "sassc-rails"
 gem "devise"
-gem "json", "~> 2.10"
+gem "json", "~> 3.1"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2", ">= 7.2.2.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
